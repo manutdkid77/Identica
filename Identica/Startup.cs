@@ -30,7 +30,7 @@ namespace Identica
 
             services.AddDbContext<IdenticaDBContext>(options => options.UseSqlServer(strConnectionString));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
                     .AddEntityFrameworkStores<IdenticaDBContext>()
                     .AddDefaultTokenProviders();
         }

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Identica.Entities
 {
-    public class IdenticaDBContext : IdentityDbContext<ApplicationUser>
+    public class IdenticaDBContext : IdentityDbContext<ApplicationUser,ApplicationRole,string>
     {
         public IdenticaDBContext(DbContextOptions options) : base(options)
         {
